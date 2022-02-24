@@ -4,23 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Iris Predictor</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
 
 <body>
- <div class="login">
+ <div>
 	<h1>Iris Predictor</h1>
-     <h3> Enter</h3>
 
-     <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="enginesize" placeholder="sepal length" required="required" />
-        <input type="text" name="cylinders" placeholder="sepal width" required="required" />
+    	<input type="text" name="length" placeholder="sepal length" required="required" />
+        <input type="text" name="width" placeholder="sepal width" required="required" />
 
         <button type="submit" class="btn">Predict</button>
     </form>
